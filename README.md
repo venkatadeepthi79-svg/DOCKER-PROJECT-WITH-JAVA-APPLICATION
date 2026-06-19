@@ -18,6 +18,55 @@ CI/CD Workflow
 6. Docker Hub Push
 7. Docker Swarm Deployment
 
+ Flowchart:  
+
+┌─────────────┐
+│   GitHub    │
+│ Source Code │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Jenkins   │
+│ Pipeline    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ SonarQube   │
+│ Code Review │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Maven Build │
+│ & Package   │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Docker      │
+│ Build Image │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Trivy Scan  │
+│ Security    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Docker Hub  │
+│ Push Images │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│Docker Swarm │
+│ Deployment  │
+└─────────────┘
+
 Key Achievements
 Implemented DevSecOps practices, automated deployments, vulnerability scanning, and production-style container orchestration.
 
